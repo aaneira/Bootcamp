@@ -183,7 +183,6 @@ function greet(name = "Guest", time = "day"){
     return `Good ${time}, ${name}!`;
 }
 
-console.log('aku ganteng');
 
 
 console.log(greet());
