@@ -17,7 +17,7 @@ let attendance;
 //Array
 let courseModules = ["Variables", "Functions", "Objects", "Arrays"];
 //Object
-let student1 = {
+let studentA = {
     name: "John",
     age: 20,
     grades: [88, 90, 100],
@@ -171,19 +171,17 @@ function sayHello(name){
 console.log(sayHello("John")); 
 
 //2. Function with Multiple Parameters
-function calculateTota(price, quantity){
+function calculateTotal(price, quantity){
     return price * quantity;
 }
 
 //Using the function
-console.log(calculateeTotal(10, 5));
+console.log(calculateTotal(10, 5));
 
 //3. Function with Default Parameters
 function greet(name = "Guest", time = "day"){
     return `Good ${time}, ${name}!`;
 }
-
-
 
 console.log(greet());
 console.log(greet("Alice", "morning"));
@@ -211,6 +209,110 @@ function getStudentResult(name, score) {
     const grade = calculateGrade(score);
     return `${name} received a grade of ${grade}`;
 }
+
+//1. Basic Class Definition
+class Student {
+    //constructor method
+    constructor(name, age, grade){
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+
+
+//Class Method
+study(){
+    return `${this.name} is studying`;
+}
+
+//Getter Method
+get studentInfo(){
+    return `${this.name}, age ${this.age}, grade ${this.grade}`;
+}
+
+//Setter Method
+set studentGrade(newGrade) {
+    if (newGrade >= 0 && newGrade <= 100){
+        this.grade  = newGrade;
+    } else {
+        console.log("Invalid Grade");
+    }
+}
+}
+
+let newStudent = new Student ("Aneira <3", 22, 100)
+let otherStudent = new Student ("Bevan", 22, 90)
+console.log(newStudent.studentInfo)
+otherStudent.studentGrade = 100
+console.log(otherStudent.studentInfo)
+
+//Creating pbjects instances of the class
+const student1 = new Student("John", 28, 85);
+const student2 = new Student("Alice", 19, 92);
+
+console.log(student1.study());
+console.log(student2.studentInfo);
+
+//2. Inherintance
+class Person {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    
+    }
+    introduce () {
+        return `Hi, I am ${this.name}`;
+    }
+}
+
+class Teacher extends Person {
+    constructor(name, age, subject) {
+        super(name, age);
+        this.subject = subject;
+    }
+
+    teach(){
+        return `${this.name} is teaching ${this.subject}`;
+    }
+
+}
+
+const teacher = new Teacher("Mr. Smith", 35, "JavaScript");
+console.log(teacher.introduce());
+console.log(teacher.teach());
+
+//3. Encapsulation using private fields (modern JavaScript)
+class BankAccount {
+    #balance = 0; //Private Field
+
+    constructor(accountHolder) {
+        this.accountHolder = accountHolder;
+    }
+
+    deposit(amount){
+        if (amount >0){
+            this.#balance += amount;
+            return `Deposited ${amount}, New balance: ${this.#balance}`;
+    }
+    return "Invalid amount";
+}
+
+
+getBalance(){
+    return this.#balance;
+}
+}
+
+const account1 = new BankAccount("John");
+console.log(account1.deposit(100)); //Output: Deposited 100. New balance: 100
+console.log(account1.getBalance()); //Output: 100
+
+// try {
+//     console.log(account1.#balance);
+// } catch (error) {
+//     console.log("akses #balance error:", error.message);
+// }
+
 
 // untuk run perintahnya node app.js
 // boleh gak pake ;
