@@ -1,39 +1,90 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-/* Font style */
-body { 
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
 }
 
-h2 {
-    color: green;
-    text-align: center;
-  }
-  
-  .card {
-    padding: 20px 50px;
-    border-radius: 20px;
-    margin:20px;
-    background-color: white;
-  
-    /* padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 50px;
-    padding-left:  50px; */
+.container {
+  padding: 0px;
+}
 
-    text-align: center;
-    width: 100%
+.profile-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+}
 
-  }
-  
-  .card img {
-    height: 50px;
-  }
+.profile-card img {
+  width: 150px;
+  border-radius: 50%;
+}
 
-  
-  #cardParent {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(90, 210, 170);
-  }
+.profile-card .name {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.profile-card .description {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.profile-card .download-resume {
+  display: inline-block;
+  background-color: #ffab35;
+  color: #ffffff;
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.recent-posts {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff4e7;
+}
+
+.recent-posts h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.recent-posts .post {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.recent-posts .post h4 {
+  margin: 0;
+}
+
+.recent-posts .post p {
+  margin: 5px 0;
+}
+
+.card {
+  padding: 20px 50px;
+  border-radius: 20px;
+  margin: 20px;
+  background-color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.card img {
+  height: 50px;
+}
+
+#cardParent {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(191, 238, 222);
+}
