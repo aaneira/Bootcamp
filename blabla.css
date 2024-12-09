@@ -2,13 +2,19 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #fafafa;
   margin: 0;
   padding: 0;
 }
 
 .container {
   padding: 0px;
+  display:flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 90px;
+  margin-right: 90px;
+  justify-content: space-between;
+  
 }
 
 .profile-card {
@@ -19,18 +25,18 @@ body {
 }
 
 .profile-card img {
-  width: 150px;
+  width: 250px;
   border-radius: 50%;
 }
 
 .profile-card .name {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
 }
 
 .profile-card .description {
   margin: 10px 0;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .profile-card .download-resume {
@@ -40,8 +46,32 @@ body {
   padding: 10px 10px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 20px;
   font-weight: bold;
+  margin-top: 20px;
+}
+
+.work {
+background-color: #ffffff;
+padding: 20px;
+border-radius: 15px;
+}
+
+.recent-posts .work {
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.recent-posts .work h4 {
+  font-size: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.recent-posts .work p {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .recent-posts {
@@ -51,15 +81,19 @@ body {
 }
 
 .recent-posts h2 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-left: 90px;
+  margin-right: 90px;
+
 }
 
 .recent-posts .post {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   margin-bottom: 10px;
+  
 }
 
 .recent-posts .post h4 {
@@ -67,7 +101,8 @@ body {
 }
 
 .recent-posts .post p {
-  margin: 5px 0;
+  margin-left: 90px;
+  margin-right: 90px;
 }
 
 .card {
@@ -86,5 +121,5 @@ body {
 #cardParent {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(191, 238, 222);
+  background-color: rgb(211, 255, 240);
 }
